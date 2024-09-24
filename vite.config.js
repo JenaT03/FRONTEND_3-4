@@ -15,5 +15,11 @@ export default defineConfig({
   },
   server: {
     port: 3001,
+    proxy: {
+      "/api": {
+        target: "http://localhost:3000/", // yêu cầu /api chuyển tới server backend có địa chỉ này
+        changeOrigin: true, //tránh các vấn đề liên quan CORS
+      },
+    }
   },
 });
