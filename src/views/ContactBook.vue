@@ -22,10 +22,12 @@
                     <i class="fas fa-redo"></i> 
                     Làm mới
                 </button>
+           
                 <button class="btn btn-sm btn-success" @click="goToAddContact">
                     <i class="fas fa-plus"></i> 
                     Thêm mới
                 </button>
+                
                 <button class="btn btn-sm btn-danger" @click="removeAllContacts">
                     <i class="fas fa-trash"></i> 
                     Xóa tất cả
@@ -128,10 +130,11 @@
             goToAddContact() {
                 this.$router.push({ name: "contact.add" });
             },
-            //Khi component được khởi tạo, gọi phương thức refreshList() để tải danh sách liên hệ ban đầu
-            mounted() {
-                this.refreshList();
-            },
+
+        },
+        //Khi component được khởi tạo, gọi phương thức refreshList() để tải danh sách liên hệ ban đầu
+        mounted() {
+            this.refreshList();
         },
    };
 </script>
